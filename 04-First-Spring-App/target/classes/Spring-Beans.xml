@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="creditCard" class="com.naveen.CreditCardPayment"></bean>
+	
+	<bean id="debitCard" class="com.naveen.DebitCardPayment"></bean>
+	
+	<bean id="upi" class="com.naveen.UpiPayment"></bean>
+	
+	<bean id="billCollector" class="com.naveen.BillCollector">
+		<!-- Property tag indicates that we are using setter injection -->
+		<!-- 
+		<property name="payment" ref="creditCard"></property>
+		<property name="payment" ref="debitCard"></property> 
+		<property name="payment" ref="upi"></property> 
+		-->
+		
+		<!-- Constructor tag indicates that we are using Constructor injection  -->
+		<constructor-arg name="payment" ref="upi"></constructor-arg>
+		
+		<!-- if we are using Setter Injection and constructor injection at a time then setter injection override the constructor injection -->	
+		<!-- 
+		<property name="payment" ref="creditCard"></property> 
+		<constructor-arg name="payment" ref="upi"></constructor-arg>
+		 -->
+		
+	</bean>
+	
+</beans>

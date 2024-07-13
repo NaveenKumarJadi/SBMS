@@ -1,0 +1,31 @@
++++++++++++++++++++++++++++++++++++++++++++++
+Scheduling the tasks:
++++++++++++++++++++++++++++++++++++++++++++++
+What is Spring Boot Scheduling?
+=> Spring Boot Scheduling help us to schedule tasks for execution at a given time period
+=> We have to use below 2 annotations to make use of Spring boot scheduling 
+@EnableScheduling
+@Scheduled
+
+Different types of Scheduling:
+FixedRate:
+=> the job at a fixed time period between invocations
+=>  It does not wait for the previous task to be complete
+
+FixedDelay:
+=> Execute the job at a fixed time period between the end of the previous invocation and the start of the next invocation
+=> It basically waits for the previous task to be complete
+
+Cron:
+=> Execute the job as per cron-expression to include triggers on the second, minute, hour, day of the month, month, and day of the week
+
+Cron Expression:
+Cron Expression format:
+<Seconds> <minutes> <hours> <day-of-month> <month> <day-of-week> <year>
+Character	Meaning	Example
+*	All. Represents that the schedule should run for every time unit	A “*” in the minute field indicates that the schedule runs every minute
+?	Any. Represents any arbitrary value. This can be used only in day-of-month and day-of-week fields	A “?” in day-of-month field will not use the day-of-month for deciding the schedule as any value is acceptable here
+-	Range. Represents a continuous range of values.	Using “5-8” in the <hour> field indicates the hours 5, 6,7 and 10
+.	Multiple Values. Separates a list of different values	Using “5,6,10” in the <hour> field indicates the hours 5, 6 and 10
+/	Increment. Specifies the amount by which to increment the values of a field	3/5 in the minute field indicates the minutes 9, 8, 13, .. 58 in an hour. */10 in the minute field indicates the minutes 0, 10, 20, …60
+

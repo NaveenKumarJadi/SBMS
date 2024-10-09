@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:password@abcde.jzd9x.mongodb.net/?retryWrites=true&w=majority&appName=ABCDE
+      database: Task

@@ -16,10 +16,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "PRODUCT_MASTER")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "PRODUCT_MASTER")
 public class Product {
 
 	@Id

@@ -1,0 +1,10 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: sb-rest-api
+    
+messages:
+  welcome: Welcome to ABC IT...!
+  greet: Good Morning
+  

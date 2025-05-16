@@ -12,23 +12,22 @@ public class BookController {
 
 	@GetMapping("/")
 	public String displayForm(Model model) {
-		
+
 		Book bookObj = new Book();
-		
+
 		model.addAttribute("book", bookObj);
-		
+
 		return "index";
 	}
-	
-	
+
 	@PostMapping("/book")
 	public String saveBook(Book book, Model model) {
-		
+
 		System.out.println(book);
-		
+
 		model.addAttribute("msg", "Book Saved Successfully");
-		
+
 		return "success";
 	}
-	
+
 }

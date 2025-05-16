@@ -6,8 +6,8 @@ import lombok.Data;
 public class Book {
 
 	private String bookName;
-	
+
 	private String authorName;
-	
+
 	private Double bookPrice;
 }

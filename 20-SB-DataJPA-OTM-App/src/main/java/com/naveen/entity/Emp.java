@@ -28,10 +28,7 @@ public class Emp {
 
 	private Double esal;
 
-	@OneToMany(
-			mappedBy = "emp", 
-			cascade = CascadeType.ALL
-	)
+	@OneToMany(mappedBy = "emp", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Address> addrList;
 
 }

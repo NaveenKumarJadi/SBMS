@@ -14,7 +14,7 @@ public class Application {
 	}
 
 	@GetMapping("/")
-	public String nani()
+	public String firstMethod()
 	{
 		return "welcome to here..";
 	}

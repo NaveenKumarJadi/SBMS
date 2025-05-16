@@ -1,0 +1,30 @@
+server:
+ port: 8081
+ 
+spring:
+  application:
+    name: WELCOME-API
+    
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+        
+  cloud:
+    compatibility-verifier:
+      enabled: false
+        
+#spring.cloud.compatibility-verifier.enabled=false        
+        
+eureka:
+  client:
+    service-url:
+      defaultZone: http://loaclhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
+        

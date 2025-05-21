@@ -24,6 +24,7 @@ public class UserService {
 		return userRepository.findById(id);
 	}
 
+//	@CachePut(value = "users", key = "'all'")
 	@CachePut(value = "users", key = "#user.id")
 	public User saveUser(User user) {
 		return userRepository.save(user);
@@ -34,6 +35,7 @@ public class UserService {
 		userRepository.deleteById(id);
 	}
 
+	@Cacheable(value = "users")
 	public List<User> getAllUsers() {
 		return userRepository.findAll();
 	}

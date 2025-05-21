@@ -52,9 +52,8 @@ public class RedisConfig {
 		log.info("Entering into RedisConfig.cacheManager() method");
 		System.out.println("Entering into RedisConfig.cacheManager() method");
 		cacheConfigs.put("users", RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofMinutes(1)));
-
-//        cacheConfigs.put("products", RedisCacheConfiguration.defaultCacheConfig()
-//                .entryTtl(Duration.ofHours(1)));
+		
+//      cacheConfigs.put("products", RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofHours(1)));
 
 		return RedisCacheManager.builder(connectionFactory).withInitialCacheConfigurations(cacheConfigs).build();
 	}

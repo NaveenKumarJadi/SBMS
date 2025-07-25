@@ -17,3 +17,7 @@ public class TestController {
         return externalService.callExternalApi();
     }
 }
+
+
+// http://localhost:8080/actuator
+// http://localhost:8080/get-data

@@ -1,10 +1,16 @@
 resilience4j:
   circuitbreaker:
     instances:
-      redisService:
+      externalService:
         registerHealthIndicator: true
         slidingWindowSize: 5
+        minimumNumberOfCalls: 3
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
-        permittedNumberOfCallsInHalfOpenState: 3
-        slidingWindowType: COUNT_BASED
+        permittedNumberOfCallsInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
